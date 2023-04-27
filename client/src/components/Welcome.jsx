@@ -27,7 +27,7 @@ const Welcome = () => {
   const handleSubmit = (e) => {
     const { addressTo, amount, keyword, message } = formData;
 
-    e.preventDefault();//cmd for not reloading the page after submit
+    e.preventDefault();
 
     if (!addressTo || !amount || !keyword || !message) return;
 

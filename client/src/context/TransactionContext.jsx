@@ -46,7 +46,7 @@ const { ethereum } = window;
         }))
         console.log(structuredTransactions);
         setTransactions(structuredTransactions);
-        //console.log(availableTransactions);
+        // console.log(availableTransactions);
       } catch (error) {
         console.log(error);
   

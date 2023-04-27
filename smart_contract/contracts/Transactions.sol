@@ -3,8 +3,6 @@
 
 pragma solidity ^0.8.0;
 
-//  let test = 5;
-//  test = '50';
 
 contract Transactions {
     

@@ -9,10 +9,10 @@ const Footer = () => (
         <img src={logo} alt="logo" className="w-32" />
       </div>
       <div className="flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full">
-        <p className="text-white text-base text-center mx-2 cursor-pointer">Market</p>
-        <p className="text-white text-base text-center mx-2 cursor-pointer">Exchange</p>
-        <p className="text-white text-base text-center mx-2 cursor-pointer">Tutorials</p>
-        <p className="text-white text-base text-center mx-2 cursor-pointer">Wallets</p>
+        <p className="text-white text-base text-center mx-2 cursor-pointer hover:scale-125"><a href="https://www.binance.com/en/markets/overview" target="_blank">Market</a></p>
+        <p className="text-white text-base text-center mx-2 cursor-pointer hover:scale-125"><a href="https://coinmarketcap.com/rankings/exchanges/" target="_blank">Exchange</a></p>
+        <p className="text-white text-base text-center mx-2 cursor-pointer hover:scale-125"><a href="https://support.metamask.io/hc/en-us/articles/360015489531-Getting-started-with-MetaMask" target="_blank">Tutorials</a></p>
+        <p className="text-white text-base text-center mx-2 cursor-pointer hover:scale-125"><a href="https://metamask.io/" target="_blank">Wallets</a></p>
       </div>
     </div>
 

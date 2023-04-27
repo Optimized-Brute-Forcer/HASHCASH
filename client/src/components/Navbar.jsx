@@ -1,15 +1,8 @@
-//QC
 import React from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
 import logo from "../../images/logo.png";
-
-const NavBarItem = ({ title, classprops }) => (
-  <li className={`mx-4 cursor-pointer ${classprops}`}>
-    {title}
-  </li>
-);
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
@@ -20,12 +13,18 @@ const Navbar = () => {
         <img src={logo} alt="logo" className="w-32 cursor-pointer" />
       </div>
       <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-      {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
-          <NavBarItem key={item + index} title={item} />
-        ))}
-        <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+      <div className="flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full">
+        <p className="text-white text-base text-center mx-5 cursor-pointer hover:scale-125"><a href="https://www.binance.com/en/markets/overview" target="_blank">Market</a></p>
+        <p className="text-white text-base text-center mx-5 cursor-pointer hover:scale-125"><a href="https://coinmarketcap.com/rankings/exchanges/" target="_blank">Exchange</a></p>
+        <p className="text-white text-base text-center mx-5 cursor-pointer hover:scale-125"><a href="https://support.metamask.io/hc/en-us/articles/360015489531-Getting-started-with-MetaMask" target="_blank">Tutorials</a></p>
+        <p className="text-white text-base text-center mx-5 cursor-pointer hover:scale-125"><a href="https://metamask.io/" target="_blank">Wallets</a></p>
+      </div>
+      <button type="button" className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
+        <p className="text-white text-base font-semibold">
           Login
-        </li>
+        </p>
+      </button>
+
       </ul>
       <div className="flex relative">
         {!toggleMenu && (
@@ -40,9 +39,12 @@ const Navbar = () => {
             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
           >
             <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {["Market", "Exchange", "Tutorials", "Wallets"].map(
-              (item, index) => <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />,
-            )}
+            <div className="flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full">
+        <p className="text-white text-base text-center mx-2 cursor-pointer"><a href="https://www.binance.com/en/markets/overview" target="_blank">Market</a></p>
+        <p className="text-white text-base text-center mx-2 cursor-pointer"><a href="https://coinmarketcap.com/rankings/exchanges/" target="_blank">Exchange</a></p>
+        <p className="text-white text-base text-center mx-2 cursor-pointer"><a href="https://support.metamask.io/hc/en-us/articles/360015489531-Getting-started-with-MetaMask" target="_blank">Tutorials</a></p>
+        <p className="text-white text-base text-center mx-2 cursor-pointer"><a href="https://metamask.io/" target="_blank">Wallets</a></p>
+      </div>
           </ul>
         )}
       </div>
